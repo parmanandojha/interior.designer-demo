@@ -29,7 +29,7 @@ export default function Nav() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-paper/95 backdrop-blur border-b hair text-ink" : light ? "text-paper" : "text-ink"
+        scrolled || open ? "bg-paper/95 backdrop-blur border-b hair text-ink" : light ? "text-paper" : "text-ink"
       }`}
     >
       <div className="container-x">
@@ -69,7 +69,7 @@ export default function Nav() {
       </div>
 
       <div
-        className={`md:hidden overflow-hidden transition-[max-height] duration-500 ${
+        className={`md:hidden overflow-hidden transition-[max-height] duration-500 bg-paper text-ink ${
           open ? "max-h-[500px]" : "max-h-0"
         }`}
       >
